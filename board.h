@@ -1,8 +1,10 @@
 #ifndef BOARD_H
 #define BOARD_H
-
+#include<QFrame>
 #include <QWidget>
 #include "stone.h"
+#include "step.h"
+#include <QVector>
 namespace Ui {
 class board;
 }
@@ -17,6 +19,7 @@ public:
     int _r;//棋子的半径
     int _selectid;
     int _beredturn;
+    QVector<Step*> _steps;
     QPoint center(int row,int col);
     QPoint center(int id);
     bool getRowCol(QPoint pt,int& row,int& col);
@@ -35,7 +38,7 @@ public:
     int getStoneId(int row,int col);
     int getStoneCountAtLine(int row1,int col1,int row2,int col2);
     void click(QPoint pt);
-    void click(int id,int row,int col);
+    virtual void click(int id,int row,int col);
     void trySelectStone(int id);
     void tryMoveStone(int id,int row,int col);
 private:

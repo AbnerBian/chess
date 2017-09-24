@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
         board.cpp \
     stone.cpp \
-    singlegame.cpp
+    singlegame.cpp \
+    step.cpp
 
 HEADERS += \
         board.h \
     stone.h \
-    singlegame.h
+    singlegame.h \
+    step.h
 
 FORMS += \
         board.ui

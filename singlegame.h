@@ -7,7 +7,10 @@ class SingleGame : public board
     Q_OBJECT
 public:
 
-    void click(int id, int row, int col);
+     void click(int id, int row, int col);
+
+public slots:
+    // void computermove();
 };
 
 #endif // SINGLEGAME_H
